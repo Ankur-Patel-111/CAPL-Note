@@ -70,6 +70,7 @@ else
 write("wrong-frame is received");
 }
 
+// How to identify recevied frame is Data frame or Remote frame = using This pointer (This pointer is c++ concept)
 
 
 
