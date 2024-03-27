@@ -72,6 +72,7 @@ write("wrong-frame is received");
 
 // How to identify recevied frame is Data frame or Remote frame = using This pointer (This pointer is c++ concept)
 
+// PANEL DESIGNER - it is used to virtual simulation of the Vehicle Designer. it is widly used in Automotive Industry.
 
 
  
