@@ -1,0 +1,76 @@
+// CAPL Scripting  Date 27-03-2024.  CAPL = Communication Access Programming Language.  
+
+1.CAPL Scripting is Developed by Vector Informatik.
+2.CAPL Scripting is a Event-Based and Event-Driven Programming Language.
+3.CAPL Scripting is a Combination of C,C++ and Python.In CAPL Scripting ALL Three Language Combination of Syntax.
+4.RTR and DLC is one kind of Identifier.
+
+//Header File
+includes
+{
+
+}
+
+// Variable
+variables
+{
+message 0x123 m1;  // here 0x123 is a identifire 
+message * m2; 
+}
+
+on key * 
+{
+//  if any key is presseed execute thhis event.
+write("key is pressed  on the keyboard");
+}
+-------------------------------------------------------------------------------------------------------------------------
+1.on start (Function)
+{
+write("Hello CAR is ON ");
+/* createing data-frame */
+m1.rtr=0;      // RTR = Remote Transmission Request.
+m1.dlc=4;     //DLC =Data Length Code
+m1.byte(0)=0x11;  // in this m1 is variable and rtr and dlc is structure variable 0x11 is data-frame.
+// if declare 0x its act as a Hexa Decimal and 11 is act as a Decimal.
+m1.byte(1)=0x22;
+m1.byte(2)=0x33;
+m1.byte(3)=0x44;
+// above mention all the data is initialiazation happened.
+}
+
+/* sending data-frame 
+{
+output(m1);
+}
+
+on preStop  // here S is capital after this function is working.
+{
+write("Car is Stop...");
+}
+
+---------------------------------------------------------------------------------------------------------------------------
+
+/* DCM (Door Control Module)
+//Note : in Door control module one door cant send to data frame to another door.
+in door control module control event below mention
+1.open window & close window
+2.Lock & Unlock
+3.send door status(open / close)
+-----------------------------------------------------------------------------------------------------
+
+// Data-frame and Remote Frame
+
+on message * 
+{
+if(this.rtr==1)    // this is Data-Frame.
+write("nodeB : Remote-frame is received");
+else if(this.rtr==0)  // this is Remote-Frame.
+write("nodeB:-Data frame is received");
+else
+write("wrong-frame is received");
+}
+
+
+
+
+ 
