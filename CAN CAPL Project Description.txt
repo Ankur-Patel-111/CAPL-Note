@@ -74,5 +74,7 @@ write("wrong-frame is received");
 
 // PANEL DESIGNER - it is used to virtual simulation of the Vehicle Designer. it is widly used in Automotive Industry.
 
+// in Switch = Right click on switch and attach system variable and in the switch under sw sys_variable. After Attaching System variable Don't forget to Save (Ctrl + s or Save symbol )the system variable or Panel Designer.if you do something   ( minute 26:18 5 video)
+
 
  
